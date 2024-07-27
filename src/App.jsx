@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import Calculator from "./components/Calculator/Calculator";
 import Navbar from "./components/Navbar/Navbar";
 
@@ -9,17 +9,17 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Page 1</Link>
+            <Link to="/">Question 1</Link>
           </li>
           <li>
-            <Link to="/page2">Page 2</Link>
+            <Link to="/q2">Question 2</Link>
           </li>
         </ul>
       </nav>
-      <Switch>
-        <Route exact path="/" component={Calculator} />
-        <Route path="/page2" component={Navbar} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Calculator />} />
+        <Route path="/q2" element={<Navbar />} />
+      </Routes>
     </div>
   );
 }

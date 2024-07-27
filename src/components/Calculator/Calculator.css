@@ -1,0 +1,31 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.calculator .input-container {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.calculator input {
+  width: 130px;
+  height: 20px;
+  margin: 0 0 4px 0;
+  padding: 3px;
+}
+
+.calculator button {
+  width: 140px;
+  padding: 3px;
+  margin: 6px 0 8px 0;
+}
+.calculator p {
+  padding: 0px;
+  margin: 16px 0 0 0;
+}
+.calculator .warning {
+  color: red;
+  margin: 4px 0 0 0;
+}
