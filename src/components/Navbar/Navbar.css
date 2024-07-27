@@ -2,17 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 10px;
   height: 40px;
   border-bottom: #cecece 0.5px solid;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
 }
 
 .title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 550;
   font-size: 15px;
-
   color: rgb(206, 12, 206);
 }
 
@@ -21,7 +26,6 @@
   flex-grow: 0.3;
   justify-content: space-around;
   align-items: center;
-
   list-style: none;
 }
 
@@ -38,22 +42,65 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   text-decoration: none;
-
   display: block;
   color: inherit;
-  height: 100%;
 }
 
 .navbar .search-bar {
   margin-left: auto;
-  border: none;
 }
 
 .navbar input {
   border-radius: 5px;
   border: none;
   outline: none;
-  padding: 8px 10px;
 
   background-color: #f4f4f4;
+  padding: 8px 10px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .navbar-header {
+    width: 100%;
+  }
+
+  .mobile-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .search-bar {
+    display: none;
+  }
+
+  .mobile-search-input {
+    width: 80px;
+    height: 15px;
+    padding: 0 5px;
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #f4f4f4;
+  }
 }
