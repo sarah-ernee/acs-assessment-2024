@@ -21,10 +21,12 @@
   padding: 3px;
   margin: 6px 0 8px 0;
 }
+
 .calculator p {
   padding: 0px;
   margin: 16px 0 0 0;
 }
+
 .calculator .warning {
   color: red;
   margin: 4px 0 0 0;
