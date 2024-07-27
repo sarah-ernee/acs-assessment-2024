@@ -9,6 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Navigation
 
-1. For a cleaner repo, Question 1 and 2 (the React parts) are contained in the /src folder.
-2. Once localhost is up and running, you can navigate to each components with the setup BrowserRouter.
+1. Question 1 and 2 files can be found within /src. Each component is housed in one folder with its own .css file.
+2. Once localhost is up and running, you can navigate to page with the buttons at the bottom left of the page.
 3. MCQs and Question 3 are stored in the root directory.

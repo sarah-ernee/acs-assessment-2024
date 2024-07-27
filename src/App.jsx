@@ -1,25 +1,37 @@
-import React from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import React, { useState } from "react";
 import Calculator from "./components/Calculator/Calculator";
 import Navbar from "./components/Navbar/Navbar";
 
+const questions = {
+  position: "fixed",
+  bottom: "10px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "5px",
+};
+
 function App() {
+  const [currentPage, setCurrentPage] = useState("Calculator");
+
+  const renderComponent = () => {
+    switch (currentPage) {
+      case "Calculator":
+        return <Calculator />;
+      case "Navbar":
+        return <Navbar />;
+      default:
+        return <Calculator />;
+    }
+  };
+
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Question 1</Link>
-          </li>
-          <li>
-            <Link to="/q2">Question 2</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Calculator />} />
-        <Route path="/q2" element={<Navbar />} />
-      </Routes>
+      {renderComponent()}
+
+      <div style={questions}>
+        <button onClick={() => setCurrentPage("Calculator")}>Question 1</button>
+        <button onClick={() => setCurrentPage("Navbar")}>Question 2</button>
+      </div>
     </div>
   );
 }
