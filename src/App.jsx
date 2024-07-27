@@ -17,7 +17,7 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route exact path="/" element={<Calculator />} />
+        <Route path="/" element={<Calculator />} />
         <Route path="/q2" element={<Navbar />} />
       </Routes>
     </div>
